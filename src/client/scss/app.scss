@@ -1,0 +1,262 @@
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import 'react-big-calendar/lib/sass/styles';
+@import 'react-big-calendar/lib/addons/dragAndDrop/styles';
+
+    body {
+      margin: 1em;
+      padding: 5em;
+    }
+    .header-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .paragraph-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+    .generic-div {
+      height: 20em;
+      width: 32em;
+      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      border-radius: 10px;
+      margin: 3em;
+      padding: 3em;
+    }
+    .task-div {
+      background-color: rgb(34, 34, 34);
+      margin-top: 3em;
+      height: 30em;
+      width: 20em;
+      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      border-radius: 10px;
+    }
+    .reminder-div {
+      margin-top: 3em;
+      height: 30em;
+      width: 20em;
+      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      border-radius: 10px;
+      margin-bottom: 2em;
+    }
+    .big-btn {
+      border: 2px solid black;
+      border-radius: 10px;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .small-btn {
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 20em;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .modal-btn {
+      border: 2px solid black;
+      border-radius: 10px;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .nav-link {
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+    }
+    .generic-form{
+      margin-top: 3em;
+      margin-bottom: 3em;
+      padding: 3em;
+      height: 24em;
+      width: 32em;
+      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      border-radius: 10px;
+    }
+    .modal-dialog {
+      box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+      border-radius: 10px;
+    }
+    .task-list{
+      padding: 2em;
+      width: 14em;
+      margin: 1em;
+      border: solid rgb(182, 182, 182) 1px;
+      border-radius: 10px;
+    }
+    .card-img-top {
+      height: 70px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      text-align: center;
+    }
+    .h1-text {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #E68568;
+      font-size: 4.3em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      -webkit-text-stroke-width: 4px;
+      -webkit-text-stroke-color:#E68568;
+    }
+    .header-img {
+      height: 30em;
+      width: auto;
+      justify-content: end;
+    }
+    .para-text {
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      font-weight: lighter;
+      text-transform: uppercase;
+    }
+    .footer-img {
+      height: 36em;
+      width: auto;
+      padding: 3em;
+      margin: 3em;
+    }
+    .footer-arrow-img{
+      height: 50px;
+      width: auto;
+    }
+    .h4-text {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #414141;
+      font-size: 2em;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .h3-text {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      font-size: 3em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    #main-navbar {
+      margin-bottom: 20px;
+    }
+    .home-header-container {
+      margin: 2em;
+      padding: 3em;
+    }
+    .header-text-container {
+      margin-top: 3em;
+      display: flex;
+      flex-direction: column;
+      float: left;
+      height: 10em;
+      width: 40em;
+    }
+    .home-page-card-container {
+      display: flex;
+      justify-content: center;
+      padding: 3em;
+    }
+    .home-pg-footer-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3em;
+      padding: 3em;
+    }
+    .bringing-balance-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2D2D2D;
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:#2d2d2d;
+    }
+    .free-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2D2D2D;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; 
+    margin-bottom: 2em;
+    }
+    .home-pg-middle-text-container {
+      height: auto;
+      width: 80em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10em;
+    }
+    .home-header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer {
+      background-color: #EEEEEE;
+      height: 7em;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-text {
+      text-align: center;
+      font-weight: 200;
+    }
+
+.navbar {
+    background-color: #414141;
+}
+
+
+
+
+// calendar styling
+
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
