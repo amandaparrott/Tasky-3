@@ -102,17 +102,18 @@
     .h1-text {
       font-family: Arial, Helvetica, sans-serif;
       color: #E68568;
-      font-size: 4.3em;
+      font-size: 4em;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1px;
-      -webkit-text-stroke-width: 4px;
+      -webkit-text-stroke-width: 5px;
       -webkit-text-stroke-color:#E68568;
     }
     .header-img {
       height: 30em;
       width: auto;
       justify-content: end;
+      margin-top: 10em;
     }
     .para-text {
       font-family: Arial, Helvetica, sans-serif;
@@ -148,8 +149,11 @@
       margin-bottom: 20px;
     }
     .home-header-container {
-      margin: 2em;
-      padding: 3em;
+      display: flex;
+      justify-content: center;
+      margin: 1em;
+      padding: 2em;
+      align-items: center;
     }
     .header-text-container {
       margin-top: 3em;
@@ -203,7 +207,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-left: 10em;
     }
     .home-header-container {
       display: flex;
@@ -227,6 +230,123 @@
     background-color: #414141;
 }
 
+// create event styling
+
+.create-event-container {
+  background-color: #E68568;
+  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  color: white;
+  margin-bottom: 2em;
+}
+
+.create-event-h1-text {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+.submit-event-btn {
+  background-color: none;
+  border: solid white 1px;
+
+}
+
+// message board styling
+
+.message-board {
+  background-color: #E68568;
+  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding: 1em;
+  margin: none;
+  color: white;
+}
+
+.message-card-body {
+  background-color: #E68568;
+  border-radius: none;
+  border: solid #E68568 1px;
+}
+
+.message-card-title {
+  color: white;
+}
+
+.message-content-wrap {
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-input {
+  border: none;
+  border-radius: 5px;
+}
+
+.message-card {
+  background-color:#E68568;
+  padding: 30px;
+}
+
+.all-messages {
+  background-color: white;
+  border-radius: 100px;
+}
+
+// task list styling
+
+.task-card {
+  background-color: #414141;
+  color: white;
+  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  border-radius: 10px;
+  margin-bottom: 3em;
+}
+
+.list-group-item {
+  background-color: #414141;
+  color: white;
+}
+
+
+// reminders styling 
+
+.reminders-card {
+  background-color: rgb(237, 237, 237);
+  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reminderInput {
+  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  border: none;
+  border-radius: 5px;
+}
+
+.reminder-list-group {
+  background-color: rgb(237, 237, 237);
+}
+
+.list-group-item {
+  background-color: rgb(237, 237, 237);
+  color: #414141;
+}
 
 
 

@@ -15,7 +15,7 @@ const TaskTimeline = () => {
         getEvents();
     }, []);
     return (
-    <div className="card text-center box shadow">
+    <div className="task-card text-center box shadow">
         <div className="card-body dispay-flex justify-content-center">
             <h1>Today's Tasks</h1>
             <ul className="list-group list-group-flush">

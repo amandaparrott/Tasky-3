@@ -16,7 +16,7 @@ const TaskyHome: React.FC<ITaskyHomeProps> = () => {
             <p className="row para-text">Tasky is a modern task and calendar app for kids and parents. Use Tasky to set mandatory tasks, manage appointments, and keep up with school assignments.</p>
         </div>
         <div>
-            <img className="header-img mx-5" src="./assets/header-img.png" alt="Header-IMG"/>
+            <img className="header-img mx-2 my-5" src="./assets/header-img.png" alt="Header-IMG"/>
         </div>
         </div>
             <div className="home-page-card-container">
