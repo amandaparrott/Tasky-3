@@ -9,11 +9,11 @@ const ReminderCard: React.FC<IReminderCardProps> = (props) => {
 
     return (
         <div className="row">
-            <li className="list-group-item justify-content-center">{props.reminder.content}</li>
+            <li className="reminder-list-group-item justify-content-center">{props.reminder.content}</li>
             <Link to={`/${props.reminder.id}/edit`} >
                 <button
                     type="button"
-                    className="btn btn-default"
+                    className="btn btn-light"
                     aria-label="Right Align"
                 >Edit</button>
             </Link>

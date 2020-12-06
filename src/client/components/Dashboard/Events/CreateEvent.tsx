@@ -27,8 +27,8 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
     }
     render() {
         return (
-            <div className="box shadow">
-                <h1>Create New Event</h1>
+            <div className="create-event-container box shadow">
+                <h1 className="create-event-h1-text">Create New Event</h1>
                 <input id="username-input" placeholder="Event Title"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ title: e.target.value }) }} value={this.state.title} />
                 
                 <input id="username-input" placeholder="Location"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ location: e.target.value }) }} value={this.state.location} />
@@ -38,8 +38,8 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
                 {/* <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ completedtask: e.target.value }) }} value={this.state.completedtask}></input>
                 <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ relationid: e.target.value }) }} value={this.state.relationid}></input>
                 <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ childnum: e.target.value }) }} value={this.state.childnum}></input> */}
-                <button className="btn btn-info" type="submit" onClick={() => this.submitEvent(this.state.title, this.state.location, this.state.time, this.state.duedate, this.state.mandatorytask, this.state.completedtask, this.state.relationid, this.state.childnum)}>
-                    Submit Event!
+                <button className="btn btn-light" type="submit" onClick={() => this.submitEvent(this.state.title, this.state.location, this.state.time, this.state.duedate, this.state.mandatorytask, this.state.completedtask, this.state.relationid, this.state.childnum)}>
+                    Add Event
                         </button>
             </div>
         )
