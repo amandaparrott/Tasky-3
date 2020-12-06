@@ -21,7 +21,7 @@ const ReminderTimeline = () => {
 
         
   <div className="card-body">
-  <ul className="list-group list-group-flush">
+  <ul className="reminder-list-group list-group-flush">
   {reminder.map((reminder) => (<ReminderCard reminder={reminder} key={reminder.id} />))}
   </ul>
   </div>

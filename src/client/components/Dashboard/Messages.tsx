@@ -19,15 +19,15 @@ const Message = () => {
     )
   })
   return (
-    <div className="box shadow">
+    <div className="message-board justify-content-center">
       <div className="row pt-2">
-        <div className="col-12">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Message Board</h5><br /><br />
-              <ul>{allMessages}</ul>
-              <input type="text" name="message" onChange={ReactMessage} /><br /><br />
-              <button className="btn btn-info" onClick={ReactEvent}>Put Message</button>
+        <div className="message-content-wrap justify-content-center">
+          <div className="message-card">
+            <div className="message-card-body">
+              <h5 className="message-card-title">Message Board</h5><br /><br />
+              <ul className="all-messages">{allMessages}</ul>
+              <input className="message-input" type="text" name="message" onChange={ReactMessage} /><br /><br />
+              <button className="btn btn-light" onClick={ReactEvent}>Send</button>
             </div>
           </div>
         </div>
