@@ -28,7 +28,7 @@ router.get("/:reqeventid", async (req, res) => {
 
 router.post("/", async (req, res) => {
     try {       
-        res.json(await db.Events.createEvent(req.body.title, req.body.location, req.body.time, req.body.duedate, req.body.mandatorytask, req.body.completedtask, req.body.relationid, req.body.childnum));
+        res.json(await db.Events.createEvent(req.body.title, req.body.location, req.body.starttime, req.body.endtime, req.body.duedate, req.body.mandatorytask, req.body.completedtask, req.body.relationid, req.body.childnum));
         res.status(200).send(`
         ${req.body.title} Event has been created
         `);
@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
 router.put("/:reqeventid", async (req, res) => {
     try {
         const eventid = req.params.reqeventid;
-        await db.Events.updateEvent(req.body.title, req.body.location, req.body.time, req.body.duedate, req.body.mandatorytask, req.body.completedtask, req.body.relationid, req.body.childnum, eventid);
+        await db.Events.updateEvent(req.body.title, req.body.location, req.body.starttime, req.body.endtime, req.body.duedate, req.body.mandatorytask, req.body.completedtask, req.body.relationid, req.body.childnum, eventid);
         res.status(200).send(`Updated event ${eventid}`)
     } catch (err) {
         console.log(err);

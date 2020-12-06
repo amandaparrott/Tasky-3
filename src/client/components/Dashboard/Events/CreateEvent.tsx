@@ -8,7 +8,8 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
         this.state = {
             title: "",
             location: "",
-            time: "",
+            starttime: "",
+            endtime: "",
             duedate: "",
             mandatorytask: "",
             completedtask: "",
@@ -16,11 +17,11 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
             childnum: ""
         }
     }
-    submitEvent = (title: string, location: string, time: string, duedate: string, mandatorytask: string, completedtask: string, relationid: string, childnum: string) => {
+    submitEvent = (title: string, location: string, starttime: string, endtime:string,  duedate: string, mandatorytask: string, completedtask: string, relationid: string, childnum: string) => {
         fetch("/api/events", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ title: title, location: location, time: time, duedate: duedate, mandatorytask:mandatorytask, completedtask:completedtask, relationid:relationid, childnum:childnum})
+            body: JSON.stringify({ title: title, location: location, starttime: starttime, endtime: endtime, duedate: duedate, mandatorytask:mandatorytask, completedtask:completedtask, relationid:relationid, childnum:childnum})
         })
             .then(res => this.props.history.push("/"))
             .catch(err => console.log(err))
@@ -32,7 +33,8 @@ export default class newEvent extends React.Component<IAppProps, IAppState> {
                 <input id="username-input" placeholder="Event Title"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ title: e.target.value }) }} value={this.state.title} />
                 
                 <input id="username-input" placeholder="Location"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ location: e.target.value }) }} value={this.state.location} />
-                <input id="username-input" placeholder="Time"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ time: e.target.value }) }} value={this.state.time} />
+                <input id="username-input" placeholder="Time"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ starttime: e.target.value }) }} value={this.state.starttime} />
+                <input id="username-input" placeholder="Time"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ endtime: e.target.value }) }} value={this.state.endtime} />
                 <input id="username-input" placeholder="Due Date"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ duedate: e.target.value }) }} value={this.state.duedate} />
                 <input id="username-input" placeholder="Mandatory?"className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ mandatorytask: e.target.value }) }} value={this.state.mandatorytask} />
                 {/* <input id="username-input" className="form-control mx-2 my-2 px-2 py-2 col-8" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { this.setState({ completedtask: e.target.value }) }} value={this.state.completedtask}></input>
@@ -50,7 +52,8 @@ interface IAppProps extends RouteComponentProps<{ title: string }> {
 interface IAppState {
     title: string,
     location: string,
-    time: string,
+    starttime: string,
+    endtime: string,
     duedate: string,
     mandatorytask: string,
     completedtask: string,
