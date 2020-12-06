@@ -3,20 +3,35 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 
+moment.locale("en-GB");
+
+
 const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 
 class App extends Component {
-    state = {
+    constructor(props) {
+        super(props);
+    this.state = {
         events: [
             {
-                start: moment().toDate(),
-                end: moment().add(1, "days").toDate(),
-                title: ""
+                title: "",
+                date: "",
+                location: "",
+                starttime: moment().toDate(),
+                endtime: moment().add(1, "days").toDate(),
+                duedate: ""
             },
         ],
     };
+}
 
+componentDidMount() {
+    fetch('/events' + this.props.match.params.id)
+    .then(res => res.json())
+    .then(events => {this.setState({ events: events })})
+    .then(events => console.log(events));
+}
     onEventResize = (data) => {
         const { start, end } = data;
 
