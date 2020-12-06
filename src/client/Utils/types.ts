@@ -1,7 +1,9 @@
 export interface IEvents {
     title: string,
     location: string,
-    time: string,
-    duedate: string
+    date: string,
+    start: string,
+    end: string,
+    duedate: string,
     relationid: number
 }

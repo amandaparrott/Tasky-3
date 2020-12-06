@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as express from "express";
 import { OkPacket } from "mysql";
+import moment from "moment";
 import db from "../db";
 
 const router = express.Router();
@@ -27,8 +28,12 @@ router.get("/:reqeventid", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-    try {       
-        res.json(await db.Events.createEvent(req.body.title, req.body.location, req.body.time, req.body.duedate, req.body.mandatorytask, req.body.completedtask, req.body.relationid, req.body.childnum));
+    try {  
+        // format all dates with moment here first. Then, send to database. 
+        req.body.start = moment().format(req.body.start) ;   
+        req.body.end = moment().format(req.body.end);
+        req.body.date = moment().format(req.body.date);
+        res.json(await db.Events.createEvent(req.body.title, req.body.location, req.body.date, req.body.start, req.body.end, req.body.duedate, req.body.mandatorytask, req.body.completedtask, req.body.relationid, req.body.childnum));
         res.status(200).send(`
         ${req.body.title} Event has been created
         `);
