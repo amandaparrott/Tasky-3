@@ -9,6 +9,7 @@ import LoginPage from './components/Auth0/LoginPage';
 import CreateAccount from './components/Auth0/CreateAccount';
 import Calendar from './components/Calendar/Calendar';
 import LogOutPage from './components/Auth0/LogoutPage';
+import PrivateRoute from "./components/Auth0/private-route";
 
 
 
@@ -25,11 +26,11 @@ const App: React.FC<IAppProps> = () => {
       <Switch>
          <Route exact path="/" component={Home} />
         <Route path="/login" component={LoginPage} />
-        <Route path="/logout" component={LogOutPage} />
+        <PrivateRoute path="/logout" component={LogOutPage} />
         <Route path="/createaccount" component={CreateAccount} />
-        <Route path="/calendar" component={Calendar} />
-        <Route exact path="/dashboard" component={Dashboard} />
-       <Route exact path="/:id/edit" component={EditReminders} />
+        <PrivateRoute path="/calendar" component={Calendar} />
+        <PrivateRoute exact path="/dashboard" component={Dashboard} />
+       <PrivateRoute exact path="/:id/edit" component={EditReminders} />
        
 
       </Switch>
