@@ -5,6 +5,7 @@ import Users from "./users";
 import Category from "./category";
 import Reminders from "./reminders";
 import Messages from "./messages";
+import Tasks from "./tasks";
 
 export const Connection = mysql.createConnection({
   host: "us-cdbr-east-02.cleardb.com",
@@ -28,5 +29,6 @@ export default {
   Users,
   Category,
   Reminders,
-  Messages
+  Messages,
+  Tasks
 };

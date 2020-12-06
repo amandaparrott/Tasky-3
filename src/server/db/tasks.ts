@@ -3,15 +3,16 @@
 import { Query } from './index';
 
 
-const getAllTasks = (mandatory: number) => Query(`
-SELECT * FROM events WHERE mandatory = ?;` [mandatory]);
+const getAllTasks = (mandatorytask: number) => Query(`
+SELECT * FROM events WHERE events.mandatorytask = ?;`, [mandatorytask]);
 
-const deleteTask= (id: number) => Query(`
-DELETE FROM events
-WHERE id = ?`, [id]);
+const getspecTask = (eventid, mandatorytask) => Query("SELECT * FROM events WHERE events.id = ? AND events.mandatorytask = ?;", [eventid, mandatorytask]);
+
+const deleteTask = (eventid) => Query(`DELETE FROM events WHERE events.id = ?;`, [eventid]);
 
 
 export default {
     getAllTasks,
+    getspecTask,
     deleteTask
 }

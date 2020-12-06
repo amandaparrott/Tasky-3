@@ -1,6 +1,6 @@
 // for clean commit only
 import React from 'react'
-import { IEvents } from "../../utils/types"
+// import { IEvents } from "../../utils/types"
 import { RouteComponentProps } from "react-router-dom"
 import {BrowserRouter as Router,Switch, Route, Link} from "react-router-dom"
 import { timeLog } from 'console'
