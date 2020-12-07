@@ -1,34 +1,34 @@
-
 import React from 'react';
 import { useState, useEffect } from 'react';
+import TaskCard from './Reminders/TaskCard';
+
 
 const TaskTimeline = () => {
-    const [events, setEvent] = useState<ITasks[]>([]);
+    const [task, setTask] = useState<ITasks[]>([]);
+
     useEffect(() => {
-        const getEvents = async () => {
-            let res = await fetch('/api/events');
+        const getTasks = async () => {
+            let res = await fetch('/api/Tasks/');
             if (res.ok) {
-                let reminders = await res.json();
-                setEvent(events);
+                let tasks = await res.json();
+                setTask(tasks);
             }
         }
-        getEvents();
+        getTasks();
     }, []);
+
     return (
-    <div className="task-card text-center box shadow">
-        <div className="card-body dispay-flex justify-content-center">
-            <h1>Today's Tasks</h1>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item">Basketball Practice</li>
-                <li className="list-group-item">Science Class</li>
-                <li className="list-group-item">Chores</li>
-                <li className="list-group-item">Dentist Appt</li>
-                {/* {events.map((events) => ())} */}
-            </ul>
-        </div>
-    </div>
+
+        
+  <div className="card-body">
+  <ul className="reminder-list-group list-group-flush">
+  {task.map((task) => (<TaskCard task={task} key={task.id} />))}
+  </ul>
+  </div>
+  
     )
 }
+
 interface ITasks {
     id: string,
     reminderid: string,
@@ -36,4 +36,5 @@ interface ITasks {
     relationid: number,
     childnum: number
 }
+
 export default TaskTimeline;
