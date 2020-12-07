@@ -14,7 +14,7 @@
       width: auto;
       display: flex;
       justify-content: left;
-      margin-left: 80px;
+      margin-right: -30px;
     }
 
     .header-text {
@@ -240,6 +240,12 @@
       align-items: center;
       padding: none;
     }
+
+    .home-sign-up-text {
+      color: #E68568;
+    }
+
+
     .footer {
       background-color: #EEEEEE;
       height: 7em;
@@ -501,3 +507,20 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
+
+  // Navbar styling
+
+ .dropdown-menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: right;
+   border: solid #E68568 3px;
+   border-radius: 5px;
+   background-color: rgb(255, 255, 255);
+   padding: 10px;
+   margin-bottom: 10px;
+ }
+
+ .nav-dropdown-btn {
+   
+ }

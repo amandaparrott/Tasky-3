@@ -77,7 +77,8 @@ const TaskyHome: React.FC<ITaskyHomeProps> = () => {
             </div>
             <div className="home-pg-middle-text-container">
                 <h3 className="bringing-balance-text justify-content-center">Bringing balance to our new work and learn from home lives.</h3>
-                <h4 className="free-text justify-content-center">And the best part is... it’s completely free... <a className="text-orange" href="/signup"></a>sign up now!</h4>
+                <h4 className="free-text justify-content-center">And the best part is... it’s completely free...
+                <a className="home-sign-up-text" href="/signup"></a>sign up now!</h4>
             </div>
             <div className="home-pg-footer-image-container">
                 <img className="footer-img" src="./assets/chaos-img.png" alt="chaos-IMG"/>

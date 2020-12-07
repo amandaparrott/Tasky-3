@@ -9,6 +9,7 @@ import LoginPage from './components/Auth0/LoginPage';
 import CreateAccount from './components/Auth0/CreateAccount';
 import Calendar from './components/Calendar/Calendar';
 import LogOutPage from './components/Auth0/LogoutPage';
+import Navbar from './components/Dashboard/Navbar';
 
 
 
