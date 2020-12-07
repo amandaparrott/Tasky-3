@@ -31,7 +31,7 @@ const EditReminder: React.FC<IEditProps> = (props: IEditProps) => {
         })
         if (res.ok) {
             console.log('reminder edited');
-            props.history.push('/');
+            props.history.push('/dashboard');
         } else {
             console.log('reminder edit failed');
         }
@@ -43,7 +43,7 @@ const EditReminder: React.FC<IEditProps> = (props: IEditProps) => {
         });
         if (res.ok) {
             console.log('reminder deleted');
-            props.history.push('/');
+            props.history.push('/dashboard');
         } else {
             console.log('reminder not deleted');
         }
@@ -52,7 +52,7 @@ const EditReminder: React.FC<IEditProps> = (props: IEditProps) => {
     return (
         <div className="editReminderContainer">
             <h1>Edit Reminder</h1>
-            <textarea className="card-text col" defaultValue={content} onChange={(e) => handleContentChange(e)}></textarea>
+            <textarea className="reminder-edit-text-area card-text col" defaultValue={content} onChange={(e) => handleContentChange(e)}></textarea>
                 <button className="btn btn-secondary rounded mx-4" onClick={() => editReminder(props.match.params.id)}>Save Edit</button>
                 <button className="btn btn-secondary rounded mx-4" onClick={() => deleteReminder(props.match.params.id)}>Delete Reminder</button>
         </div>

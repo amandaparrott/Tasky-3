@@ -8,12 +8,39 @@ import Profile from '../components/Auth0/Profile';
 const TaskyHome: React.FC<ITaskyHomeProps> = () => {
     return (
         <>
-      
+                    {/* <nav className="navbar sticky-top navbar">
+                        <img src="../assets/taskylogo.png" alt="tasky logo" className="d-flex justify-content-left mx-auto" id="main-logo"></img>
+                        <div>
+                            <LoginButton /><LogoutButton />
+                        </div>
+                            <button className="btn btn-outline-dark mx-2" type="button"><Profile /><Profile />Profile</button>
+
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                        </a>
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a className="dropdown-item" href="#">Action</a>
+                        <a className="dropdown-item" href="#">Another action</a>
+                        <a className="dropdown-item" href="#">Something else here</a>
+                        </div>
+			        </nav> */}
+        
+                {/* <div>
+                    <LoginButton /><LogoutButton />
+                </div>
+            
+            
+                <div className="btn btn-dark">
+                    <Profile />
+                </div> */}
+            
+        
+
         <div className="home-header-container">
-        <div className="header-text-container mx-5">
+        <div className="header-text-container">
             <h4 className="row h4-text">Welcome to Tasky</h4>
             <h1 className="row h1-text">Your schedule, Your way.</h1>
-            <p className="row para-text">Tasky is a modern task and calendar app for kids and parents. Use Tasky to set mandatory tasks, manage appointments, and keep up with school assignments.</p>
+            <p className="row header-para-text">Tasky is a modern task and calendar app for kids and parents. Use Tasky to set mandatory tasks, manage appointments, and keep up with school assignments.</p>
         </div>
         <div>
             <img className="header-img mx-2 my-5" src="./assets/header-img.png" alt="Header-IMG"/>
@@ -49,8 +76,8 @@ const TaskyHome: React.FC<ITaskyHomeProps> = () => {
             </div>
             </div>
             <div className="home-pg-middle-text-container">
-                <h3 className="bringing-balance-text">Bringing balance to our new work and learn from home lives.</h3>
-                <h4 className="free-text">And the best part is... it’s completely free... <a href="/signup"></a>sign up now!</h4>
+                <h3 className="bringing-balance-text justify-content-center">Bringing balance to our new work and learn from home lives.</h3>
+                <h4 className="free-text justify-content-center">And the best part is... it’s completely free... <a className="text-orange" href="/signup"></a>sign up now!</h4>
             </div>
             <div className="home-pg-footer-image-container">
                 <img className="footer-img" src="./assets/chaos-img.png" alt="chaos-IMG"/>
@@ -61,18 +88,6 @@ const TaskyHome: React.FC<ITaskyHomeProps> = () => {
                 <p className="footer-text">©TASKYCALENDARAPP.COM</p>
             </div>
 
-            {/* login button stuff */}
-
-            <div className="row display-flex mx-1 my-5">
-                <div className="col-4">
-                    <LoginButton /><LogoutButton />
-                </div>
-            </div>
-            <div className="row display-flex mx-1 my-5">
-                <div className="col-4">
-                    <Profile />
-                </div>
-            </div>
         </>
     )
 }

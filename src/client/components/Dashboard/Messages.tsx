@@ -26,8 +26,8 @@ const Message = () => {
             <div className="message-card-body">
               <h5 className="message-card-title">Message Board</h5><br /><br />
               <ul className="all-messages">{allMessages}</ul>
-              <input className="message-input" type="text" name="message" onChange={ReactMessage} /><br /><br />
-              <button className="btn btn-light" onClick={ReactEvent}>Send</button>
+              <textarea className="message-input" rows={5} cols={30} name="message" onChange={ReactMessage} ></textarea><br /> <br />
+              <button className="send-message-btn" onClick={ReactEvent}>Send</button>
             </div>
           </div>
         </div>

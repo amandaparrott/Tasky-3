@@ -39,7 +39,7 @@ const newReminder = async () => {
         <div className="reminders-card box shadow mt-2">
             <div className="new-reminder mt-4">
                 <div className="row justify-content-center">
-                    <h1 className="header-text text-center">Reminders</h1>
+                    <h1 className="reminders-header-text text-center">Reminders</h1>
                 </div>
                 <div className="new-reminder row justify-content-center">
                     <input
@@ -50,7 +50,7 @@ const newReminder = async () => {
                     ></input>
                     <button 
                     type="button" 
-                    className="add-reminder-btn btn btn-dark" 
+                    className="add-reminder-btn" 
                     aria-label="Right Align"
                     onClick={e => handleClick(e)}>
                         Add

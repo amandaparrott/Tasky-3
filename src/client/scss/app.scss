@@ -5,9 +5,17 @@
 @import 'react-big-calendar/lib/addons/dragAndDrop/styles';
 
     body {
-      margin: 1em;
-      padding: 5em;
+      margin: none;
+      padding: none;
     }
+
+    #main-logo {
+      height: 80px;
+      width: auto;
+      display: flex;
+      justify-content: left;
+    }
+
     .header-text {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 50px;
@@ -113,7 +121,8 @@
       height: 30em;
       width: auto;
       justify-content: end;
-      margin-top: 10em;
+      margin: none;
+      padding: none;
     }
     .para-text {
       font-family: Arial, Helvetica, sans-serif;
@@ -121,15 +130,22 @@
       font-weight: lighter;
       text-transform: uppercase;
     }
+
+    .header-para-text {
+      margin-right: 20px;
+    }
+
     .footer-img {
-      height: 36em;
+      height: 26em;
       width: auto;
-      padding: 3em;
-      margin: 3em;
+      padding: 2em;
+      margin: none;
+      margin-top: -30px;
     }
     .footer-arrow-img{
       height: 50px;
       width: auto;
+      margin-top: -30px;
     }
     .h4-text {
       font-family: Arial, Helvetica, sans-serif;
@@ -148,15 +164,19 @@
     #main-navbar {
       margin-bottom: 20px;
     }
+
+  
+
     .home-header-container {
       display: flex;
       justify-content: center;
       margin: 1em;
-      padding: 2em;
+      margin-top: -30px;
       align-items: center;
     }
     .header-text-container {
-      margin-top: 3em;
+      margin-top: -30px;
+      margin-right: 20px;
       display: flex;
       flex-direction: column;
       float: left;
@@ -172,8 +192,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 3em;
-      padding: 3em;
+      margin-left: 100px;
+      margin-right: 100px;
+      padding: 5em;
+      height: 44em;
+      width: auto;
     }
     .bringing-balance-text {
     font-family: Arial, Helvetica, sans-serif;
@@ -187,14 +210,14 @@
     margin-top: 3em;
     margin-bottom: 1em;
     text-align: center;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color:#2d2d2d;
     }
     .free-text {
     font-family: Arial, Helvetica, sans-serif;
     color: #2D2D2D;
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center; 
@@ -207,11 +230,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      margin-left: 80px;
     }
     .home-header-container {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: none;
     }
     .footer {
       background-color: #EEEEEE;
@@ -226,15 +252,23 @@
       font-weight: 200;
     }
 
-.navbar {
-    background-color: #414141;
+  .navbar {
+    background-color: #E68568;
+    margin-top: 20px;
+}
+
+// dashboard styling
+
+.dashboard-container {
+  margin: 2em;
+  padding: none;
 }
 
 // create event styling
 
 .create-event-container {
-  background-color: #E68568;
-  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  background-color: #ffffff;
+  box-shadow: -8px 20px 30px 10px rgb(167, 167, 167);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -246,22 +280,26 @@
 }
 
 .create-event-h1-text {
-  color: white;
+  color: #414141;
   text-align: center;
   font-size: 2em;
 }
 
-.submit-event-btn {
-  background-color: none;
-  border: solid white 1px;
+.add-event-btn {
+  background-color: #E68568;
+  margin: 30px;
+  border: solid #E68568 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
 // message board styling
 
 .message-board {
-  background-color: #E68568;
-  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
+  background-color: #ffffff;
+  box-shadow: -8px 20px 30px 10px rgb(210, 210, 210);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -273,13 +311,16 @@
 }
 
 .message-card-body {
-  background-color: #E68568;
+  background-color: #ffffff;
   border-radius: none;
-  border: solid #E68568 1px;
 }
 
 .message-card-title {
-  color: white;
+  color: #414141;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .message-content-wrap {
@@ -293,11 +334,26 @@
 .message-input {
   border: none;
   border-radius: 5px;
+  margin-top: -50px;
+  background-color: #b1b1b180;
 }
 
 .message-card {
-  background-color:#E68568;
+  background-color:#ffffff;
   padding: 30px;
+}
+
+.send-message-btn {
+  background-color: #E68568;
+  margin: 30px;
+  border: solid #E68568 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-left: 90px;
+  margin-top: -20px;
 }
 
 .all-messages {
@@ -308,23 +364,23 @@
 // task list styling
 
 .task-card {
-  background-color: #414141;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: #414141;
   box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
   border-radius: 10px;
   margin-bottom: 3em;
 }
 
 .list-group-item {
-  background-color: #414141;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: #414141;
 }
 
 
 // reminders styling 
 
 .reminders-card {
-  background-color: rgb(237, 237, 237);
+  background-color: rgb(255, 255, 255);
   box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
   border-radius: 10px;
   display: flex;
@@ -334,20 +390,59 @@
 }
 
 .reminderInput {
-  box-shadow: -8px 20px 30px 10px rgb(181, 181, 181);
-  border: none;
+  border: solid #E68568 3px;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.61);
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .reminder-list-group {
-  background-color: rgb(237, 237, 237);
+  background-color: rgb(255, 255, 255);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.list-group-item {
-  background-color: rgb(237, 237, 237);
+.reminder-list-group-item {
+  margin: 10px;
+}
+
+.add-reminder-btn {
+  background-color: #E68568;
+  border: solid #E68568 5px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.edit-reminder-btn {
+  margin-left: 3em;
+  justify-content: center;
+}
+
+.editReminderContainer {
+  height: 30em;
+  width: 50em;
+}
+
+.reminder-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(225, 225, 225) 1px;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.reminders-header-text {
   color: #414141;
 }
-
 
 
 // calendar styling

@@ -17,10 +17,9 @@ const App: React.FC<IAppProps> = () => {
   return (
     <Router>
       <nav className="navbar sticky-top navbar">
-					<button className="btn btn-outline-light" type="button">Home</button>
-          <h1 className="text-light">TASKY</h1>
-          {/* <<img src="" alt="tasky logo" class="d-flex justify-content-center mx-auto" id="icon"></img>> */}
-					<button className="btn btn-outline-light" type="button">Menu</button>
+          <img src="../assets/Tasky-logo-white.png" alt="tasky logo" className="d-flex justify-content-left mx-auto" id="main-logo"></img>
+					<button className="btn btn-outline-light mx-2" type="button">Home</button>
+					<button className="btn btn-outline-light mx-2" type="button">Menu</button>
 			</nav>
       <Switch>
          <Route exact path="/" component={Home} />

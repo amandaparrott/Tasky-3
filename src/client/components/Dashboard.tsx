@@ -11,12 +11,12 @@ import Profile from '../components/Auth0/Profile';
 
 const Dashboard: React.FC<IDashboardProps> = () => {
     return (
-        <div className="container">
-            <div className="row display-flex mx-1 my-5">
+        <div className="dashboard-container">
+            {/* <div className="row display-flex mx-1 my-5">
                 <div className="col-4">
                     <LoginButton /><LogoutButton />
                 </div>
-            </div>
+            </div> */}
             <div className="row display-flex mx-1 my-5">
                 <div className="col-4">
                     <Profile />

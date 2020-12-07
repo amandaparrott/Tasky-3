@@ -20,10 +20,10 @@ const ReminderTimeline = () => {
     return (
 
         
-  <div className="card-body">
-  <ul className="reminder-list-group list-group-flush">
+  <div className="reminder-card-body mx-5">
+  <ol className="reminder-list-group d-flex justify-content-left list-group-flush">
   {reminder.map((reminder) => (<ReminderCard reminder={reminder} key={reminder.id} />))}
-  </ul>
+  </ol>
   </div>
   
     )
