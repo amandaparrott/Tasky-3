@@ -58,6 +58,7 @@ class App extends Component<IAppProps> {
                         events={this.state.events}
                         localizer={localizer}
                         style={{ height: "100vh" }}
+                        onSelectEvent={}
                     />
                 </div>
 
